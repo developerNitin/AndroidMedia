@@ -15,11 +15,13 @@ public class MainActivity extends AppCompatActivity {
         ImageView bartboard = (ImageView) findViewById(R.id.imageView2);
 
         if(bartisshowing) {
+            bartisshowing = false;
+
             bart.animate().alpha(0).setDuration(2000);
             bartboard.animate().alpha(1).setDuration(2000);
         } else {
-            bart.animate().alpha(0).setDuration(2000);
-            bartboard.animate().alpha(1).setDuration(2000);
+            bart.animate().alpha(1).setDuration(2000);
+            bartboard.animate().alpha(0).setDuration(2000);
         }
     }
 
