@@ -8,9 +8,19 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
+    boolean bartisshowing = true;
+
     public void fade(View view) {
         ImageView bart = (ImageView) findViewById(R.id.imageView);
-        bart.animate().alpha(0).setDuration(2000);
+        ImageView bartboard = (ImageView) findViewById(R.id.imageView2);
+
+        if(bartisshowing) {
+            bart.animate().alpha(0).setDuration(2000);
+            bartboard.animate().alpha(1).setDuration(2000);
+        } else {
+            bart.animate().alpha(0).setDuration(2000);
+            bartboard.animate().alpha(1).setDuration(2000);
+        }
     }
 
     @Override
